@@ -1,2 +1,2 @@
 # My_portfolio
-visit the portfolio inthis link - https://github.com/jdislam/My_Portfolio.git
+Visit the portfolio in this link - https://jdislam.github.io/My_Portfolio/
