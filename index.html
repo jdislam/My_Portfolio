@@ -24,33 +24,35 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto align-items-center">
                     <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
+                        <a class="nav-link" href="#home" data-i18n="navHome">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
+                        <a class="nav-link" href="#about" data-i18n="navAbout">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#service">Service</a>
+                        <a class="nav-link" href="#service" data-i18n="navService">Service</a>
                     </li>                   
                     <li class="nav-item">
-                        <a class="nav-link" href="#portfolio">Projects</a>
+                        <a class="nav-link" href="#portfolio" data-i18n="navProjects">Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#upskilling">Upskilling</a>
+                        <a class="nav-link" href="#upskilling" data-i18n="navUpskilling">Upskilling</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#testmonial">Education</a>
+                        <a class="nav-link" href="#education" data-i18n="navEducation">Education</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#blog">Achievements</a>
+                        <a class="nav-link" href="#blog" data-i18n="navAchievements">Achievements</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#hobby">Hobbies</a>
+                        <a class="nav-link" href="#hobby" data-i18n="navHobbies">Hobbies</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
+                        <a class="nav-link" href="#contact" data-i18n="navContact">Contact</a>
                     </li>
-                   
+                    <li class="nav-item">
+                        <button id="lang-toggle" type="button" class="btn btn-outline-secondary btn-sm ml-3">বাংলা</button>
+                    </li>
                 </ul>
             </div>
         </div>          
@@ -61,17 +63,15 @@
     <header class="header" id="home">
         <div class="container">
             <div class="infos">
-                <h6 class="subtitle">Hey!I'm</h6>
-                <h6 class="title">Md Jahidul</h6>
-                <h2>B.Sc in CSE</h2>
-                <p>Graduate@UAP | Data Analyst | Tech Enthusiast</p>
-
-            
+                <h6 class="subtitle" data-i18n="headerGreeting">Hey! I'm</h6>
+                    <h6 class="title" data-i18n="headerName">Md Jahidul</h6>
+                    <h2 data-i18n="headerDegree">B.Sc in CSE</h2>
+                    <p data-i18n-html="headerDescription">Graduate | Data Analyst | Tech Enthusiast</p>
 
                 <div class="buttons pt-3">
                     <a href="assets/Jahidul_CV.pdf" target="_blank">
-                    <button class="btn btn-dark rounded"> VIEW CV </button>
-					</a>
+                        <button class="btn btn-dark rounded" data-i18n="viewCvBtn">VIEW CV</button>
+                    </a>
                 </div>      
 
                 <div class="socials mt-4">
@@ -94,26 +94,26 @@
         <div class="container mt-5">
             <div class="row text-center text-md-left">
                 <div class="col-md-3">
-                    <img src="assets/imgs/aboutPic.jpg" alt="" class="img-thumbnail mb-4">
+                    <img src="assets/imgs/aboutPic.jpg" alt="About picture" class="img-thumbnail mb-4" data-i18n-alt="aboutImageAlt">
                 </div>
                 <div class="pl-md-4 col-md-9">
                     <h6 class="title">Md Jahidul Islam</h6>
                     <p class="subtitle"></p>
 
-                    <p>
+                    <p data-i18n-html="aboutParagraph1">
                         I am Md Jahidul Islam, a Computer Science and Engineering graduate from the University of Asia Pacific with a strong interest in <b>Web Development</b> and building modern, user-friendly, and scalable web applications using <b>Python, Django, JavaScript, SQL</b>. I also have practical experience in <b>IT support</b> and <b>System configuration</b> through my professional internship. I enjoy solving real-world problems and learning new technologies through projects and practical experience.
                     </p>
 
-                    <p>
+                    <p data-i18n-html="aboutParagraph2">
                         Beyond web development, I am actively exploring <b>Cloud Computing</b> and <b>Cybersecurity</b>, expanding my knowledge of cloud platforms, secure application development, networking, and industry best practices. I am passionate about continuous learning, embracing emerging technologies, and contributing to innovative, technology-driven solutions.
                     </p>
-                    <p class="subtitle">Why Me?</p>
-                    <p> I really like what I do.</p>
-                        <p> I keep learning new things.</p>
-                            <p>I like working with others.</p>
-					 <a href="assets/Jahidul_CV.pdf" download>
-                    <button class="btn btn-primary rounded mt-3">DOWNLOAD CV</button>
-					</a>
+                    <p class="subtitle" data-i18n="aboutWhyMe">Why Me?</p>
+                    <p data-i18n="aboutWhyMeLine1"> I really like what I do.</p>
+                        <p data-i18n="aboutWhyMeLine2"> I keep learning new things.</p>
+                            <p data-i18n="aboutWhyMeLine3">I like working with others.</p>
+                    <a href="assets/Jahidul_CV.pdf" download>
+                        <button class="btn btn-primary rounded mt-3" data-i18n="downloadCvBtn">DOWNLOAD CV</button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -123,8 +123,8 @@
     <section id="service" class="section">
         <div class="container text-center">
             <h6 class="subtitle"></h6>
-            <h6 class="section-title mb-4">What I Do</h6>
-            <p class="mb-5 pb-4">I try to give my 110% in every work I do. <br> Always learning, always improving.</p>
+            <h6 class="section-title mb-4" data-i18n="serviceTitle">What I Do</h6>
+            <p class="mb-5 pb-4" data-i18n-html="serviceIntro">I try to give my 110% in every work I do. <br> Always learning, always improving.</p>
 
             <div class="row">
                 
@@ -132,15 +132,15 @@
                     <div class="custom-card card border">
                         <div class="card-body">
                             <i class="icon ti-desktop"></i>
-                            <h5>Web Development</h5>
+                            <h5 data-i18n="serviceCardWeb">Web Development</h5>
                         </div>
                     </div>
                 </div>
-				<div class="col-sm-6 col-md-3 mb-4">
+			<div class="col-sm-6 col-md-3 mb-4">
                     <div class="custom-card card border">
                         <div class="card-body">
                             <i class="icon ti-server"></i>
-                            <h5>Backend Development</h5>
+                            <h5 data-i18n="serviceCardBackend">Backend Development</h5>
                         </div>
                     </div>
                 </div>
@@ -148,7 +148,7 @@
                     <div class="custom-card card border">
                         <div class="card-body">
                             <i class="icon ti-panel"></i>
-                            <h5>Data Analyst</h5>
+                            <h5 data-i18n="serviceCardData">Data Analyst</h5>
                         </div>
                     </div>
                 </div>
@@ -156,7 +156,7 @@
                     <div class="custom-card card border">
                         <div class="card-body">
                             <i class="icon ti-settings"></i>
-                            <h5>IT Support</h5>
+                            <h5 data-i18n="serviceCardIT">IT Support</h5>
                         </div>
                     </div>
                 </div>
@@ -169,62 +169,62 @@
     <section class="section">
         <div class="container text-center">
             <h6 class="subtitle"></h6>
-            <h6 class="section-title mb-4">Areas of Expertise</h6>
-            <p class="mb-5 pb-4">Not saying I am pro at all these! <br>Learning and always trying to do better.</p>
+            <h6 class="section-title mb-4" data-i18n="skillsTitle">Areas of Expertise</h6>
+            <p class="mb-5 pb-4" data-i18n-html="skillsIntro">Not saying I am pro at all these! <br>Learning and always trying to do better.</p>
 
             <div class="row text-left">
 
 				<div class="col-sm-6">
-                    <h6 class="mb-3">Python, C, Java</h6>
+                    <h6 class="mb-3" data-i18n="skillsItem1">Python, C, Java</h6>
                     <div class="progress">
                         <div class="progress-bar bg-primary" role="progressbar" style="width: 85%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>85%</span></div>
                     </div>
                 </div>
                 <div class="col-sm-6">
-                    <h6 class="mb-3">HTML, CSS, JavaScript</h6>
+                    <h6 class="mb-3" data-i18n="skillsItem2">HTML, CSS, JavaScript</h6>
                     <div class="progress">
                         <div class="progress-bar bg-primary" role="progressbar" style="width: 88%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>88%</span></div>
                     </div>
                 </div>
                 <div class="col-sm-6">
-                    <h6 class="mb-3">Django, Bootstrap</h6>
+                    <h6 class="mb-3" data-i18n="skillsItem3">Django, Bootstrap</h6>
                     <div class="progress">
                         <div class="progress-bar bg-primary" role="progressbar" style="width: 85%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>85%</span></div>
                     </div>
                 </div>
         
                 <div class="col-sm-6">
-                    <h6 class="mb-3">Data Structures & Algorithms</h6>
+                    <h6 class="mb-3" data-i18n="skillsItem4">Data Structures & Algorithms</h6>
                     <div class="progress">
                         <div class="progress-bar bg-primary" role="progressbar" style="width: 80%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>80%</span></div>
                     </div>
                 </div>
                 <div class="col-sm-6">
-                    <h6 class="mb-3">OOP & Software Development</h6>
+                    <h6 class="mb-3" data-i18n="skillsItem5">OOP & Software Development</h6>
                     <div class="progress">
                         <div class="progress-bar bg-primary" role="progressbar" style="width: 82%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>82%</span></div>
                     </div>
                 </div>
                 <div class="col-sm-6">
-                    <h6 class="mb-3">IT Support & Troubleshooting</h6>
+                    <h6 class="mb-3" data-i18n="skillsItem6">IT Support & Troubleshooting</h6>
                     <div class="progress">
                         <div class="progress-bar bg-primary" role="progressbar" style="width: 85%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>85%</span></div>
                     </div>
                 </div>
                 <div class="col-sm-6">
-                    <h6 class="mb-3">GitHub</h6>
+                    <h6 class="mb-3" data-i18n="skillsItem7">GitHub</h6>
                     <div class="progress">
                         <div class="progress-bar bg-primary" role="progressbar" style="width: 85%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>85%</span></div>
                     </div>
                 </div>
                 <div class="col-sm-6">
-                    <h6 class="mb-3">Microsoft Office</h6>
+                    <h6 class="mb-3" data-i18n="skillsItem8">Microsoft Office</h6>
                     <div class="progress">
                         <div class="progress-bar bg-primary" role="progressbar" style="width: 90%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>90%</span></div>
                     </div>
                 </div>
                 <div class="col-sm-6">
-                    <h6 class="mb-3">Canva, Camtasia</h6>
+                    <h6 class="mb-3" data-i18n="skillsItem9">Canva, Camtasia</h6>
                     <div class="progress">
                         <div class="progress-bar bg-primary" role="progressbar" style="width: 80%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>80%</span></div>
                     </div>
@@ -237,35 +237,35 @@
      <section class="section">
         <div class="container text-center">
             <h6 class="subtitle"></h6>
-            <h6 class="section-title mb-4">Soft Skills</h6>
-            <p class="mb-5 pb-4">Skills Outside the Coding </p>
+            <h6 class="section-title mb-4" data-i18n="softSkillsTitle">Soft Skills</h6>
+            <p class="mb-5 pb-4" data-i18n="softSkillsIntro">Skills Outside the Coding </p>
 
             <div class="row text-left">
                 <div class="col-sm-6">
-                    <h6 class="mb-3">Communication</h6>
+                    <h6 class="mb-3" data-i18n="softSkillCommunication">Communication</h6>
                     <div class="progress">
                         <div class="progress-bar bg-warning" role="progressbar" style="width: 90%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>90%</span></div>
                     </div>
                 </div>
                 <div class="col-sm-6">
-                    <h6 class="mb-3">Teamwork</h6>
+                    <h6 class="mb-3" data-i18n="softSkillTeamwork">Teamwork</h6>
                     <div class="progress">
                         <div class="progress-bar bg-warning" role="progressbar" style="width: 90%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>90%</span></div>
                     </div>
                 </div>
                 <div class="col-sm-6">
-                    <h6 class="mb-3">Time Management</h6>
+                    <h6 class="mb-3" data-i18n="softSkillTime">Time Management</h6>
                     <div class="progress">
                         <div class="progress-bar bg-warning" role="progressbar" style="width: 85%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>85%</span></div>
                     </div>
                 </div>
                 <div class="col-sm-6">
-                    <h6 class="mb-3">Customer Service</h6>
+                    <h6 class="mb-3" data-i18n="softSkillCustomerService">Customer Service</h6>
                     <div class="progress">
-                        <div class="progress-bar bg-warning" role="progressbar" style="width: 85%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>85%</span></div>
+                        <div class="progress-bar bg-warning" role="progressbar" style="width: 80%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>80%</span></div>
                     </div>
                 </div>
-            </div>  
+            </div>
         </div>
     </section>
     <!-- End of Skills sections -->
@@ -274,18 +274,18 @@
     <!-- Project section -->
     <section id="portfolio" class="section">
         <div class="container text-center">
-            <h6 class="subtitle">Projects</h6>
-            <h6 class="section-title mb-4">Check My Works</h6>
-            <p class="mb-5 pb-4">Don't have a lot of awesome project right now ; <br>But looking forward to working on more projects! </p>
+            <h6 class="subtitle" data-i18n="portfolioTitle">Projects</h6>
+            <h6 class="section-title mb-4" data-i18n="portfolioSectionTitle">Check My Works</h6>
+            <p class="mb-5 pb-4" data-i18n-html="portfolioIntro">Don't have a lot of awesome project right now ; <br>But looking forward to working on more projects! </p>
 
             <div class="row justify-content-center">
                 <div class="col-md-6">
                     <div class="custom-card card border text-left p-4">
                         <div class="card-body">
-                            <h5>Ride Schedule <span class="subtitle">— Academic Project</span></h5>
-                            <p class="mt-2">Ride Scheduling and Service Management System. Riders can post daily, weekly, or monthly ride schedules and drivers can manage ride requests. Includes service-based ride features like parcel and pharmacy-related rides, fare estimation through CostBot, ratings, and notifications.</p>
-                            <p><b>Tech used:</b> Django, HTML, CSS, JavaScript, Bootstrap</p>
-                            <a href="https://github.com/jdislam/Ride_Schedule" target="_blank"><i class="ti-github"></i> View on GitHub</a>
+                            <h5 data-i18n-html="project1Title">Ride Schedule <span class="subtitle">— Academic Project</span></h5>
+                            <p class="mt-2" data-i18n-html="project1Desc">Ride Scheduling and Service Management System. Riders can post daily, weekly, or monthly ride schedules and drivers can manage ride requests. Includes service-based ride features like parcel and pharmacy-related rides, fare estimation through CostBot, ratings, and notifications.</p>
+                            <p><b data-i18n="projectTechLabel">Tech used:</b> <span data-i18n="project1Tech">Django, HTML, CSS, JavaScript, Bootstrap</span></p>
+                            <a href="https://github.com/jdislam/Ride_Schedule" target="_blank"><i class="ti-github"></i> <span data-i18n="projectViewLink">View on GitHub</span></a>
                         </div>
                     </div>
                 </div>
@@ -293,10 +293,10 @@
                 <div class="col-md-6">
                     <div class="custom-card card border text-left p-4">
                         <div class="card-body">
-                            <h5>Mini Compiler <span class="subtitle">— Academic Project</span></h5>
-                            <p class="mt-2">A complete end-to-end mini-compiler built in Python featuring tokenization, AST generation, type/semantic checking, Three-Address Code (TAC) generation, a peephole optimizer, stack-machine code generation, and a custom Virtual Machine runtime.</p>
-                            <p><b>Tech used:</b> python </p>
-                            <a href="https://github.com/jdislam/Mini_Compiler" target="_blank"><i class="ti-github"></i> View on GitHub</a>
+                            <h5 data-i18n-html="project2Title">Mini Compiler <span class="subtitle">— Academic Project</span></h5>
+                            <p class="mt-2" data-i18n-html="project2Desc">A complete end-to-end mini-compiler built in Python featuring tokenization, AST generation, type/semantic checking, Three-Address Code (TAC) generation, a peephole optimizer, stack-machine code generation, and a custom Virtual Machine runtime.</p>
+                            <p><b data-i18n="projectTechLabel">Tech used:</b> <span data-i18n="project2Tech">Python</span> </p>
+                            <a href="https://github.com/jdislam/Mini_Compiler" target="_blank"><i class="ti-github"></i> <span data-i18n="projectViewLink">View on GitHub</span></a>
                         </div>
                     </div>
                 </div>
@@ -304,17 +304,17 @@
                 <div class="col-md-6">
                     <div class="custom-card card border text-left p-4">
                         <div class="card-body">
-                            <h5>Square_Analog_Clock <span class="subtitle">— Academic Project</span></h5>
-                            <p class="mt-2">A modern analog clock with a squircle (rounded-square) dial, dynamic shadows, smoothly sweeping hands, and an animated pendulum. Built it for Computer Graphics Lab.</p>
-                            <p><b>Tech used:</b> C++ and OpenGL/GLUT </p>
-                            <a href="https://github.com/jdislam/squircle-analog-clock.git" target="_blank"><i class="ti-github"></i> View on GitHub</a>
+                            <h5 data-i18n-html="project3Title">Square_Analog_Clock <span class="subtitle">— Academic Project</span></h5>
+                            <p class="mt-2" data-i18n-html="project3Desc">A modern analog clock with a squircle (rounded-square) dial, dynamic shadows, smoothly sweeping hands, and an animated pendulum. Built it for Computer Graphics Lab.</p>
+                            <p><b data-i18n="projectTechLabel">Tech used:</b> <span data-i18n="project3Tech">C++ and OpenGL/GLUT</span> </p>
+                            <a href="https://github.com/jdislam/squircle-analog-clock.git" target="_blank"><i class="ti-github"></i> <span data-i18n="projectViewLink">View on GitHub</span></a>
                         </div>
                     </div>
                 </div>
 
                 <!-- To add another project, copy the col-md-6 block above, change the text, and update the link -->
             </div>
-            <p class="mt-4"><i>More projects coming soon!</i></p>
+            <p class="mt-4"><i data-i18n="moreProjects">More projects coming soon!</i></p>
 
         </div>
     </section>
@@ -324,17 +324,17 @@
     <section id="upskilling" class="section">
         <div class="container text-center">
             <h6 class="subtitle"></h6>
-            <h6 class="section-title mb-4">Certifications & Training</h6>
-            <p class="mb-5 pb-4">Courses and hands-on training I've completed</p>
+            <h6 class="section-title mb-4" data-i18n="upskillingTitle">Certifications & Training</h6>
+            <p class="mb-5 pb-4" data-i18n="upskillingIntro">Courses and hands-on training I've completed</p>
 
             <div class="row text-left justify-content-center">
                 <div class="col-md-4">
                     <div class="custom-card card border mb-4 p-3" data-toggle="modal" data-target="#certModalDataAnalyst" style="cursor:pointer;">
                         <div class="card-body">
                             <i class="icon ti-bar-chart"></i>
-                            <h5 class="card-title">Data Analyst with SQL & Python</h5>
-                            <p>Certification course completed at Farhan's Academy — 3 months duration.</p>
-                            <a href="javascript:void(0)" data-toggle="modal" data-target="#certModalDataAnalyst"><i class="ti-eye"></i> View Certificate</a>
+                            <h5 class="card-title" data-i18n="cert1Title">Data Analyst with SQL & Python</h5>
+                            <p data-i18n-html="cert1Desc">Certification course completed at Farhan's Academy — 3 months duration.</p>
+                            <a href="javascript:void(0)" data-toggle="modal" data-target="#certModalDataAnalyst"><i class="ti-eye"></i> <span data-i18n="viewCertificateBtn">View Certificate</span></a>
                         </div>
                     </div>
                 </div>
@@ -342,9 +342,9 @@
                     <div class="custom-card card border mb-4 p-3" data-toggle="modal" data-target="#certModalInternship" style="cursor:pointer;">
                         <div class="card-body">
                             <i class="icon ti-briefcase"></i>
-                            <h5 class="card-title">Hardware & Software Internship</h5>
-                            <p>Daffodil Computers Ltd. — 3-month on-site internship (June–Sept 2025), Dhaka.</p>
-                            <a href="javascript:void(0)" data-toggle="modal" data-target="#certModalInternship"><i class="ti-eye"></i> View Appointment Letter</a>
+                            <h5 class="card-title" data-i18n="cert2Title">Hardware & Software Internship</h5>
+                            <p data-i18n-html="cert2Desc">Daffodil Computers Ltd. — 3-month on-site internship (June–Sept 2025), Dhaka.</p>
+                            <a href="javascript:void(0)" data-toggle="modal" data-target="#certModalInternship"><i class="ti-eye"></i> <span data-i18n="viewAppointmentBtn">View Appointment Letter</span></a>
                         </div>
                     </div>
                 </div>
@@ -355,11 +355,11 @@
                 <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title">Data Analyst with SQL & Python Certificate</h5>
+                            <h5 class="modal-title" data-i18n="modalCertDataAnalystTitle">Data Analyst with SQL & Python Certificate</h5>
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
                         </div>
                         <div class="modal-body text-center">
-                            <img src="assets/imgs/certificates/Data_Analyst_SQL_Python.jpg" class="img-fluid" alt="Data Analyst with SQL and Python Certificate">
+                            <img src="assets/imgs/certificates/Data_Analyst_SQL_Python.jpg" class="img-fluid" alt="Data Analyst with SQL and Python Certificate" data-i18n-alt="modalCertDataAnalystAlt">
                         </div>
                     </div>
                 </div>
@@ -370,11 +370,11 @@
                 <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title">Internship Appointment Letter</h5>
+                            <h5 class="modal-title" data-i18n="modalCertInternshipTitle">Internship Appointment Letter</h5>
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
                         </div>
                         <div class="modal-body text-center">
-                            <img src="assets/imgs/certificates/Internship_Appointment_Letter.jpg" class="img-fluid" alt="Internship Appointment Letter">
+                            <img src="assets/imgs/certificates/Internship_Appointment_Letter.jpg" class="img-fluid" alt="Internship Appointment Letter" data-i18n-alt="modalCertInternshipAlt">
                         </div>
                     </div>
                 </div>
@@ -385,11 +385,11 @@
     <!-- End of Upskilling section -->
 
     <!-- Education Section -->
-    <section id="testmonial" class="section">
+    <section id="education" class="section">
         <div class="container text-center">
             <h6 class="subtitle"></h6>
-            <h6 class="section-title mb-4">Educational Background</h6>
-            <p class="mb-5 pb-4">A little about my <br>School,College,University</p>
+            <h6 class="section-title mb-4" data-i18n="educationTitle">Educational Background</h6>
+            <p class="mb-5 pb-4" data-i18n-html="educationIntro">A little about my <br>School,College,University</p>
 
 
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -402,34 +402,34 @@
                     <div class="carousel-item active">
                         <div class="card testmonial-card border">
                             <div class="card-body">
-                                <img src="assets/imgs/uni.png" alt="">
+                                <img src="assets/imgs/uni.png" alt="University icon" data-i18n-alt="educationUniversityAlt">
                                 
-                                <h1 class="title">University</h1>
-                                <h1 class="subtitle">University of Asia Pacific (UAP) </h1>
-                                <p>B.Sc in Computer Science and Engineering</p>
-                                <p>CGPA: 3.78 | Jan 2022 - Dec 2025</p>
+                                <h1 class="title" data-i18n="educationUniversity">University</h1>
+                                <h1 class="subtitle" data-i18n="educationUniversityName">University of Asia Pacific (UAP)</h1>
+                                <p data-i18n="educationUniversityDegree">B.Sc in Computer Science and Engineering</p>
+                                <p data-i18n="educationUniversityDates">CGPA: 3.78 | Jan 2022 - Dec 2025</p>
                             </div>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="card testmonial-card border">
                             <div class="card-body">
-                                <img src="assets/imgs/college.png" alt="">
+                                <img src="assets/imgs/college.png" alt="College icon" data-i18n-alt="educationCollegeAlt">
                                 
-                                <h1 class="title">College</h1>
-                                <h1 class="subtitle">Dhaka City College</h1>
-                                <p>HSC, Science - GPA 5.00 (2020)</p>
+                                <h1 class="title" data-i18n="educationCollege">College</h1>
+                                <h1 class="subtitle" data-i18n="educationCollegeName">Dhaka City College</h1>
+                                <p data-i18n="educationCollegeDegree">HSC, Science - GPA 5.00 (2020)</p>
                             </div>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="card testmonial-card border">
                             <div class="card-body">
-                                <img src="assets/imgs/school.png" alt="">
+                                <img src="assets/imgs/school.png" alt="School icon" data-i18n-alt="educationSchoolAlt">
 
-                                <h1 class="title">School</h1>
-                                <h1 class="subtitle">B. N College</h1>
-                                <p>SSC, Science - GPA 5.00 (2018)</p>
+                                <h1 class="title" data-i18n="educationSchool">School</h1>
+                                <h1 class="subtitle" data-i18n="educationSchoolName">B. N College</h1>
+                                <p data-i18n="educationSchoolDegree">SSC, Science - GPA 5.00 (2018)</p>
                             </div>
                         </div>
                     </div>
@@ -443,17 +443,17 @@
     <section id="blog" class="section">
         <div class="container text-center">
             <h6 class="subtitle"></h6>
-            <h6 class="section-title mb-4">Achievements & Awards</h6>
-            <p class="mb-5 pb-4">Some milestones along the way</p>
+            <h6 class="section-title mb-4" data-i18n="achievementsTitle">Achievements & Awards</h6>
+            <p class="mb-5 pb-4" data-i18n="achievementsIntro">Some milestones along the way</p>
 
             <div class="row text-left">
                 <div class="col-md-4">
                     <div class="custom-card card border mb-4 p-3" data-toggle="modal" data-target="#certModalRobo" style="cursor:pointer;">
                         <div class="card-body">
                             <i class="icon ti-cup"></i>
-                            <h5 class="card-title">Robo Expo Champion</h5>
-                            <p>Champion, UAP Robo Expo 2.0 LFR Competition — Team_Optimal.</p>
-                            <a href="javascript:void(0)" data-toggle="modal" data-target="#certModalRobo"><i class="ti-eye"></i> View Certificate</a>
+                            <h5 class="card-title" data-i18n="achievementRoboTitle">Robo Expo Champion</h5>
+                            <p data-i18n="achievementRoboDesc">Champion, UAP Robo Expo 2.0 LFR Competition — Team_Optimal.</p>
+                            <a href="javascript:void(0)" data-toggle="modal" data-target="#certModalRobo"><i class="ti-eye"></i> <span data-i18n="viewCertificateBtn">View Certificate</span></a>
                         </div>
                     </div>
                 </div>
@@ -461,9 +461,9 @@
                     <div class="custom-card card border mb-4 p-3" data-toggle="modal" data-target="#certModalVC" style="cursor:pointer;">
                         <div class="card-body">
                             <i class="icon ti-medall"></i>
-                            <h5 class="card-title">Vice Chancellor's Award</h5>
-                            <p>Awarded in Fall 2024 and Spring 2025 for academic excellence.</p>
-                            <a href="javascript:void(0)" data-toggle="modal" data-target="#certModalVC"><i class="ti-eye"></i> View Certificates</a>
+                            <h5 class="card-title" data-i18n="achievementVC">Vice Chancellor's Award</h5>
+                            <p data-i18n="achievementVCDesc">Awarded in Fall 2024 and Spring 2025 for academic excellence.</p>
+                            <a href="javascript:void(0)" data-toggle="modal" data-target="#certModalVC"><i class="ti-eye"></i> <span data-i18n="viewCertificatesBtn">View Certificates</span></a>
                         </div>
                     </div>
                 </div>
@@ -471,9 +471,9 @@
                     <div class="custom-card card border mb-4 p-3" data-toggle="modal" data-target="#certModalDean" style="cursor:pointer;">
                         <div class="card-body">
                             <i class="icon ti-medall-alt"></i>
-                            <h5 class="card-title">Dean's Award</h5>
-                            <p>Awarded in Fall 2022 and Spring 2024 for academic excellence.</p>
-                            <a href="javascript:void(0)" data-toggle="modal" data-target="#certModalDean"><i class="ti-eye"></i> View Certificates</a>
+                            <h5 class="card-title" data-i18n="achievementDean">Dean's Award</h5>
+                            <p data-i18n="achievementDeanDesc">Awarded in Fall 2022 and Spring 2024 for academic excellence.</p>
+                            <a href="javascript:void(0)" data-toggle="modal" data-target="#certModalDean"><i class="ti-eye"></i> <span data-i18n="viewCertificatesBtn">View Certificates</span></a>
                         </div>
                     </div>
                 </div>
@@ -481,9 +481,9 @@
                     <div class="custom-card card border mb-4 p-3" data-toggle="modal" data-target="#certModalContests" style="cursor:pointer;">
                         <div class="card-body">
                             <i class="icon ti-flag-alt-2"></i>
-                            <h5 class="card-title">Programming Contests</h5>
-                            <p>Participated in Intra-University Programming Contest 1.0 (2022) and EEE Tech Fest (2023) at UAP.</p>
-                            <a href="javascript:void(0)" data-toggle="modal" data-target="#certModalContests"><i class="ti-eye"></i> View Certificates</a>
+                            <h5 class="card-title" data-i18n="achievementContests">Programming Contests</h5>
+                            <p data-i18n="achievementContestsDesc">Participated in Intra-University Programming Contest 1.0 (2022) and EEE Tech Fest (2023) at UAP.</p>
+                            <a href="javascript:void(0)" data-toggle="modal" data-target="#certModalContests"><i class="ti-eye"></i> <span data-i18n="viewCertificatesBtn">View Certificates</span></a>
                         </div>
                     </div>
                 </div>
@@ -491,9 +491,9 @@
                     <div class="custom-card card border mb-4 p-3" data-toggle="modal" data-target="#certModalLFR" style="cursor:pointer;">
                         <div class="card-body">
                             <i class="icon ti-target"></i>
-                            <h5 class="card-title">LFR Competitions</h5>
-                            <p>Participated in KUET BitFest 2025 and UIU CSE Fest 2025 LFR Competitions with UAP_Optimal.</p>
-                            <a href="javascript:void(0)" data-toggle="modal" data-target="#certModalLFR"><i class="ti-eye"></i> View Certificates</a>
+                            <h5 class="card-title" data-i18n="achievementLFR">LFR Competitions</h5>
+                            <p data-i18n="achievementLFRDesc">Participated in KUET BitFest 2025 and UIU CSE Fest 2025 LFR Competitions with UAP_Optimal.</p>
+                            <a href="javascript:void(0)" data-toggle="modal" data-target="#certModalLFR"><i class="ti-eye"></i> <span data-i18n="viewCertificatesBtn">View Certificates</span></a>
                         </div>
                     </div>
                 </div>
@@ -505,11 +505,11 @@
                 <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title">Robo Expo Champion Certificate</h5>
+                            <h5 class="modal-title" data-i18n="modalCertRoboTitle">Robo Expo Champion Certificate</h5>
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
                         </div>
                         <div class="modal-body text-center">
-                            <img src="assets/imgs/certificates/robo1.jpg" class="img-fluid" alt="Robo Expo Certificate">
+                            <img src="assets/imgs/certificates/robo1.jpg" class="img-fluid" alt="Robo Expo Certificate" data-i18n-alt="modalCertRoboAlt">
                             <!-- <img src="assets/imgs/certificates/robo2.jpg" class="img-fluid" alt="Robo Expo Certificate">
                             <img src="assets/imgs/certificates/robo3.jpg" class="img-fluid" alt="Robo Expo Certificate"> -->
                         </div>
@@ -522,12 +522,12 @@
                 <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title">Vice Chancellor's Award Certificates</h5>
+                            <h5 class="modal-title" data-i18n="modalCertVCTitle">Vice Chancellor's Award Certificates</h5>
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
                         </div>
                         <div class="modal-body text-center">
-                            <img src="assets/imgs/certificates/VC_Fall24.jpg" class="img-fluid mb-3" alt="VC Award Fall 2024">
-                            <img src="assets/imgs/certificates/VC_Spring25.jpg" class="img-fluid" alt="VC Award Spring 2025">
+                            <img src="assets/imgs/certificates/VC_Fall24.jpg" class="img-fluid mb-3" alt="VC Award Fall 2024" data-i18n-alt="modalCertVCAlt1">
+                            <img src="assets/imgs/certificates/VC_Spring25.jpg" class="img-fluid" alt="VC Award Spring 2025" data-i18n-alt="modalCertVCAlt2">
                         </div>
                     </div>
                 </div>
@@ -538,12 +538,12 @@
                 <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title">Dean's Award Certificates</h5>
+                            <h5 class="modal-title" data-i18n="modalCertDeanTitle">Dean's Award Certificates</h5>
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
                         </div>
                         <div class="modal-body text-center">
-                            <img src="assets/imgs/certificates/Dean_Fall22.jpg" class="img-fluid mb-3" alt="Dean's Award Fall 2022">
-                            <img src="assets/imgs/certificates/Dean_Spring24.jpg" class="img-fluid" alt="Dean's Award Spring 2024">
+                            <img src="assets/imgs/certificates/Dean_Fall22.jpg" class="img-fluid mb-3" alt="Dean's Award Fall 2022" data-i18n-alt="modalCertDeanAlt1">
+                            <img src="assets/imgs/certificates/Dean_Spring24.jpg" class="img-fluid" alt="Dean's Award Spring 2024" data-i18n-alt="modalCertDeanAlt2">
                         </div>
                     </div>
                 </div>
@@ -554,12 +554,12 @@
                 <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title">Programming Contest Certificates</h5>
+                            <h5 class="modal-title" data-i18n="modalCertContestsTitle">Programming Contest Certificates</h5>
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
                         </div>
                         <div class="modal-body text-center">
-                            <img src="assets/imgs/certificates/intra_programming_contest_2022.jpg" class="img-fluid mb-3" alt="Intra Programming Contest 2022">
-                            <img src="assets/imgs/certificates/eee_tech_fest_2023.jpg" class="img-fluid" alt="EEE Tech Fest 2023">
+                            <img src="assets/imgs/certificates/intra_programming_contest_2022.jpg" class="img-fluid mb-3" alt="Intra Programming Contest 2022" data-i18n-alt="modalCertContestsAlt1">
+                            <img src="assets/imgs/certificates/eee_tech_fest_2023.jpg" class="img-fluid" alt="EEE Tech Fest 2023" data-i18n-alt="modalCertContestsAlt2">
                         </div>
                     </div>
                 </div>
@@ -570,13 +570,13 @@
                 <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title">LFR Competition Certificates</h5>
+                            <h5 class="modal-title" data-i18n="modalCertLFRTitle">LFR Competition Certificates</h5>
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
                         </div>
                         <div class="modal-body text-center">
-                            <img src="assets/imgs/certificates/Kuet.jpg" class="img-fluid mb-3" alt="KUET BitFest 2025">
-                            <img src="assets/imgs/certificates/uiu.jpg" class="img-fluid" alt="UIU CSE Fest 2025">
-                            <img src="assets/imgs/certificates/NRC.jpg" class="img-fluid" alt="National Robotics Championship 2025">
+                            <img src="assets/imgs/certificates/Kuet.jpg" class="img-fluid mb-3" alt="KUET BitFest 2025" data-i18n-alt="modalCertLFRAlt1">
+                            <img src="assets/imgs/certificates/uiu.jpg" class="img-fluid" alt="UIU CSE Fest 2025" data-i18n-alt="modalCertLFRAlt2">
+                            <img src="assets/imgs/certificates/NRC.jpg" class="img-fluid" alt="National Robotics Championship 2025" data-i18n-alt="modalCertLFRAlt3">
                         </div>
                     </div>
                 </div>
@@ -589,55 +589,55 @@
     <section id="hobby" class="section">
         <div class="container text-center">
             <h6 class="subtitle"></h6>
-            <h6 class="section-title mb-4">Hobbies</h6>
-            <p class="mb-5 pb-4">What I love to do when I'm not working!</p>
+            <h6 class="section-title mb-4" data-i18n="hobbiesTitle">Hobbies</h6>
+            <p class="mb-5 pb-4" data-i18n="hobbiesIntro">What I love to do when I'm not working!</p>
 
             <div class="row text-left">
                 <div class="col-md-3">
                     <div class="card border mb-4">
-                        <img src="assets/imgs/travel.jpg" alt="Travel" class="card-img-top w-100">
+                        <img src="assets/imgs/travel.jpg" alt="Travel" class="card-img-top w-100" data-i18n-alt="hobbyTravelAlt">
                         <div class="card-body">
-                            <h5 class="card-title">Travel</h5>
+                            <h5 class="card-title" data-i18n="hobbyTravel">Travel</h5>
                             <div class="post-details">
                                 <a href="javascript:void(0)"><i class="ti-bag"></i></a>
                             </div>
-                            <p>I love exploring new places and experiencing different cultures whenever I get the chance.</p>
+                            <p data-i18n="hobbyTravelDesc">I love exploring new places and experiencing different cultures whenever I get the chance.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="card border mb-4">
-                        <img src="assets/imgs/photography.jpg" alt="Photography" class="card-img-top w-100">
+                        <img src="assets/imgs/photography.jpg" alt="Photography" class="card-img-top w-100" data-i18n-alt="hobbyPhotographyAlt">
                         <div class="card-body">
-                            <h5 class="card-title">Photography</h5>
+                            <h5 class="card-title" data-i18n="hobbyPhotography">Photography</h5>
                             <div class="post-details">
                                 <a href="javascript:void(0)"><i class="ti-camera"></i></a>
                             </div>
-                            <p>I enjoy capturing moments and landscapes through the lens, especially while traveling.</p>
+                            <p data-i18n="hobbyPhotographyDesc">I enjoy capturing moments and landscapes through the lens, especially while traveling.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="card border mb-4">
-                        <img src="assets/imgs/planting_trees.jpg" alt="Planting Trees" class="card-img-top w-100">
+                        <img src="assets/imgs/planting_trees.jpg" alt="Planting Trees" class="card-img-top w-100" data-i18n-alt="hobbyPlantingAlt">
                         <div class="card-body">
-                            <h5 class="card-title">Planting Trees</h5>
+                            <h5 class="card-title" data-i18n="hobbyPlanting">Planting Trees</h5>
                             <div class="post-details">
                                 <a href="javascript:void(0)"><i class="ti-thought"></i></a>
                             </div>
-                            <p>I like spending time outdoors planting trees, contributing my bit toward a greener environment.</p>
+                            <p data-i18n="hobbyPlantingDesc">I like spending time outdoors planting trees, contributing my bit toward a greener environment.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="card border mb-4">
-                        <img src="assets/imgs/cycling.jpg" alt="Cycling" class="card-img-top w-100">
+                        <img src="assets/imgs/cycling.jpg" alt="Cycling" class="card-img-top w-100" data-i18n-alt="hobbyCyclingAlt">
                         <div class="card-body">
-                            <h5 class="card-title">Cycling</h5>
+                            <h5 class="card-title" data-i18n="hobbyCycling">Cycling</h5>
                             <div class="post-details">
                                 <a href="javascript:void(0)"><i class="ti-direction"></i></a>
                             </div>
-                            <p>Cycling helps me stay active and clear my head — a great way to unwind after a long day.</p>
+                            <p data-i18n="hobbyCyclingDesc">Cycling helps me stay active and clear my head — a great way to unwind after a long day.</p>
                         </div>
                     </div>
                 </div>
@@ -653,16 +653,16 @@
                 <div class="card-body text-light">
                     <div class="row align-items-center">
                         <div class="col-sm-9 text-center text-sm-left">
-                            <h5 class="mt-3">Open to Job Opportunities</h5>
-                            <p class="mb-3">Looking for a full stack / backend developer? Let's talk about how I can contribute to your team.</p>
+                            <h5 class="mt-3" data-i18n="hireTitle">Open to Job Opportunities</h5>
+                            <p class="mb-3" data-i18n="hireDescription">Looking for a full stack / backend developer? Let's talk about how I can contribute to your team.</p>
                         </div>
                         <div class="col-sm-3 text-center text-sm-right">
                             <a href="#contact">
-                                <button class="btn btn-light rounded">Hire Me!</button>
+                                <button class="btn btn-light rounded" data-i18n="hireButton">Hire Me!</button>
                             </a>
                             <br>
                             <a href="https://mail.google.com/mail/?view=cm&fs=1&to=prithonjahid2480@gmail.com&su=Job%20Opportunity%20for%20Jahidul" target="_blank" class="text-light mt-2 d-inline-block">
-                                <small><i class="ti-email"></i> or email me directly</small>
+                                <small><i class="ti-email"></i> <span data-i18n="hireEmailText">or email me directly</span></small>
                             </a>
                         </div>
                     </div>
@@ -675,10 +675,10 @@
     <!-- Contact Section -->
     <section id="contact" class="position-relative section">
         <div class="container text-center">
-            <h6 class="subtitle">Contacts</h6>
-            <h6 class="section-title mb-4">Get In Touch With Me</h6>
+            <h6 class="subtitle" data-i18n="contactTitle">Contacts</h6>
+            <h6 class="section-title mb-4" data-i18n="contactSubtitle">Get In Touch With Me</h6>
             
-                    <h6 class="subtitle">Available 24/7</h6>
+                    <h6 class="subtitle" data-i18n="contactAvailability">Available 24/7</h6>
                     <h6 class="section-title mb-4"></h6>
                     
                 
@@ -686,7 +686,7 @@
                     <div class="item">
                         <i class="ti-email"></i>
                         <div class="mb-0">
-                            <h5>Email Address</h5>
+                            <h5 data-i18n="contactEmailLabel">Email Address</h5>
                             <p>prithonjahid2480@gmail.com</p>
                         </div>
                     </div>
@@ -694,7 +694,7 @@
                     <div class="item">
                         <i class="ti-mobile"></i>
                         <div>
-                            <h5>Phone Number</h5>
+                            <h5 data-i18n="contactPhoneLabel">Phone Number</h5>
                             <p>+880 1822-771136</p>
                         </div>                          
                     </div>
@@ -702,7 +702,7 @@
                     <div class="item">
                         <i class="ti-location-pin"></i>
                         <div class="">
-                            <h5>Location</h5>
+                            <h5 data-i18n="contactLocationLabel">Location</h5>
                             <p>Dhaka, Bangladesh</p>
                         </div>                          
                     </div>
@@ -718,7 +718,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-sm-6">
-                    <p>Find me in</p>
+                    <p data-i18n="footerFindMe">Find me in</p>
                 </div>
                 <div class="col-sm-6">
                     <div class="socials">
