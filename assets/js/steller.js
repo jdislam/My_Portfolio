@@ -21,12 +21,24 @@ $(document).ready(function(){
 			event.preventDefault();
 
 			var hash = this.hash;
+			var navHeight = $('.navbar').outerHeight() || 0;
 
 			$('html, body').animate({
-				scrollTop: $(hash).offset().top
+				scrollTop: $(hash).offset().top - navHeight + 1
 			}, 700, function(){
-				window.location.hash = hash;
+				if (history.pushState) {
+					history.pushState(null, null, hash);
+				} else {
+					window.location.hash = hash;
+				}
 			});
-      	} 
+       	}
     });
+
+	var navHeight = $('.navbar').outerHeight() || 0;
+	$('body').scrollspy({
+		target: '.navbar',
+		offset: navHeight + 2
+	});
+	$('body').scrollspy('refresh');
 });

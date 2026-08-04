@@ -8710,6 +8710,12 @@ button.bg-dark:focus {
   z-index: 1030;
 }
 
+/* Prevent fixed navbar from covering linked sections */
+header[id],
+section[id] {
+  scroll-margin-top: 90px;
+}
+
 .fixed-bottom {
   position: fixed;
   right: 0;
