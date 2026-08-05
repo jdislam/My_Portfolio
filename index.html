@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Md Jahidul Islam - Data Analyst | Full Stack Django Developer">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
+    <meta name="description" content="Md Jahidul Islam - Data Analyst | Tech Enthusiast">
     <meta name="author" content="Md Jahidul Islam">
     <title>Jahidul | Portfolio</title>
     <!-- font icons -->
@@ -11,7 +11,7 @@
     <!-- Bootstrap + Steller main styles -->
 	<link rel="stylesheet" href="assets/css/steller.css">
 </head>
-<body id="home">
+<body>
 
     <!-- Page navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" data-spy="affix" data-offset-top="0">
@@ -50,7 +50,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#contact" data-i18n="navContact">Contact</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item lang-item">
                         <button id="lang-toggle" type="button" class="btn btn-outline-secondary btn-sm ml-3">বাংলা</button>
                     </li>
                 </ul>
@@ -111,7 +111,7 @@
                     <p data-i18n="aboutWhyMeLine1"> I really like what I do.</p>
                         <p data-i18n="aboutWhyMeLine2"> I keep learning new things.</p>
                             <p data-i18n="aboutWhyMeLine3">I like working with others.</p>
-                    <a href="assets/Jahidul_CV.pdf" download>
+                    <a href="assets/Jahidul_CV.pdf" download="Jahidul_CV.pdf" id="downloadCvLink">
                         <button class="btn btn-primary rounded mt-3" data-i18n="downloadCvBtn">DOWNLOAD CV</button>
                     </a>
                 </div>
@@ -582,7 +582,6 @@
                 </div>
             </div>
 
-        </div>
     </section>
 
     <!-- Hobbies Section -->
@@ -708,8 +707,7 @@
                     </div>
                 </div>                  
             </div>
-        </div>  
-           
+
     </section>
     <!-- End of Contact Section -->
 
@@ -732,6 +730,47 @@
         </div>
     </footer> 
     <!-- End of page footer -->
+
+    <!-- Mobile Bottom Navigation (thumb-friendly, mobile only) -->
+    <nav class="bottom-nav" id="bottomNav" aria-label="Section navigation">
+        <a href="#home" class="bottom-nav-link nav-link">
+            <span class="bn-icon" aria-hidden="true">🏠</span>
+            <span class="bn-label" data-i18n="navHome">Home</span>
+        </a>
+        <a href="#about" class="bottom-nav-link nav-link">
+            <span class="bn-icon" aria-hidden="true">👤</span>
+            <span class="bn-label" data-i18n="navAbout">About</span>
+        </a>
+        <a href="#service" class="bottom-nav-link nav-link">
+            <span class="bn-icon" aria-hidden="true">🛠️</span>
+            <span class="bn-label" data-i18n="navService">Service</span>
+        </a>
+        <a href="#portfolio" class="bottom-nav-link nav-link">
+            <span class="bn-icon" aria-hidden="true">💼</span>
+            <span class="bn-label" data-i18n="navProjects">Projects</span>
+        </a>
+        <a href="#upskilling" class="bottom-nav-link nav-link">
+            <span class="bn-icon" aria-hidden="true">🎓</span>
+            <span class="bn-label" data-i18n="navUpskilling">Upskilling</span>
+        </a>
+        <a href="#education" class="bottom-nav-link nav-link">
+            <span class="bn-icon" aria-hidden="true">📙</span>
+            <span class="bn-label" data-i18n="navEducation">Education</span>
+        </a>
+        <a href="#blog" class="bottom-nav-link nav-link">
+            <span class="bn-icon" aria-hidden="true">🏆</span>
+            <span class="bn-label" data-i18n="navAchievements">Achievements</span>
+        </a>
+        <a href="#hobby" class="bottom-nav-link nav-link">
+            <span class="bn-icon" aria-hidden="true">🎨</span>
+            <span class="bn-label" data-i18n="navHobbies">Hobbies</span>
+        </a>
+        <a href="#contact" class="bottom-nav-link nav-link">
+            <span class="bn-icon" aria-hidden="true">✉️</span>
+            <span class="bn-label" data-i18n="navContact">Contact</span>
+        </a>
+    </nav>
+    <!-- End of Mobile Bottom Navigation -->
 	
 	<!-- core  -->
     <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>

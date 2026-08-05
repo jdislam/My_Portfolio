@@ -34,5 +34,28 @@
 
 	@include media-breakpoint-down(sm) {
 		padding: 0 20px;
+
+		// Bottom nav takes over section links on mobile;
+		// keep only the language toggle in the top bar.
+		.navbar-toggler {
+			display: none;
+		}
+
+		#navbarSupportedContent {
+			display: flex !important;
+			width: auto;
+		}
+
+		.navbar-nav {
+			flex-direction: row;
+
+			.nav-item:not(.lang-item) {
+				display: none;
+			}
+
+			.lang-item {
+				margin-left: auto;
+			}
+		}
 	}
 }

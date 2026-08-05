@@ -42,10 +42,14 @@ $(document).ready(function(){
 	});
 	$('body').scrollspy('refresh');
 
+	initBottomNavActiveState();
+
 	$('#lang-toggle').on('click', function(){
 		var nextLang = currentLang === 'bn' ? 'en' : 'bn';
 		setLanguage(nextLang);
 	});
+
+	initForceDownloadCv();
 
 	initLanguage();
 });
@@ -388,8 +392,117 @@ function initLanguage() {
 	setLanguage(currentLang);
 }
 
+// The plain HTML `download` attribute is unreliable for PDFs in several
+// browsers (notably Safari, which opens the built-in PDF viewer instead of
+// saving the file regardless of the attribute). Fetching the file ourselves
+// and triggering the save via a blob URL works consistently across
+// Chrome, Firefox, Edge, and modern Safari/iOS Safari.
+function initForceDownloadCv() {
+	var link = document.getElementById('downloadCvLink');
+	if (!link) {
+		return;
+	}
+
+	link.addEventListener('click', function(event) {
+		// If the browser can't do fetch/blob downloads, just let the
+		// normal <a download> / navigation behavior happen.
+		if (!window.fetch || !window.Blob || typeof document.createElement('a').download === 'undefined') {
+			return;
+		}
+
+		event.preventDefault();
+
+		var fileUrl = link.getAttribute('href');
+		var fileName = link.getAttribute('download') || 'Jahidul_CV.pdf';
+
+		fetch(fileUrl)
+			.then(function(response) {
+				if (!response.ok) {
+					throw new Error('Network response was not OK');
+				}
+				return response.blob();
+			})
+			.then(function(blob) {
+				var blobUrl = URL.createObjectURL(blob);
+				var tempLink = document.createElement('a');
+				tempLink.href = blobUrl;
+				tempLink.download = fileName;
+				document.body.appendChild(tempLink);
+				tempLink.click();
+				document.body.removeChild(tempLink);
+				setTimeout(function() {
+					URL.revokeObjectURL(blobUrl);
+				}, 1000);
+			})
+			.catch(function() {
+				// Fetch failed (e.g. offline) - fall back to a normal
+				// navigation so the user can still get the file.
+				window.location.href = fileUrl;
+			});
+	});
+}
+
 function updateLangToggleLabel() {
 	if ($('#lang-toggle').length) {
 		$('#lang-toggle').text(currentLang === 'bn' ? 'English' : 'বাংলা');
 	}
+}
+
+// Highlights the current section's icon in the mobile bottom nav as the
+// user scrolls, and keeps the active icon scrolled into view within the
+// horizontally-scrollable bar. Progressive enhancement: does nothing in
+// browsers without IntersectionObserver, and the links still work as
+// plain anchors either way.
+function initBottomNavActiveState() {
+	var bottomNavLinks = document.querySelectorAll('.bottom-nav-link');
+	if (!bottomNavLinks.length || !('IntersectionObserver' in window)) {
+		return;
+	}
+
+	var sectionMap = [];
+	bottomNavLinks.forEach(function(link) {
+		var hash = link.getAttribute('href');
+		var target = hash ? document.querySelector(hash) : null;
+		if (target) {
+			sectionMap.push({ link: link, target: target });
+		}
+	});
+
+	if (!sectionMap.length) {
+		return;
+	}
+
+	function setActive(link) {
+		bottomNavLinks.forEach(function(l) {
+			l.classList.remove('active');
+			l.removeAttribute('aria-current');
+		});
+		link.classList.add('active');
+		link.setAttribute('aria-current', 'true');
+
+		if (typeof link.scrollIntoView === 'function') {
+			link.scrollIntoView({ inline: 'center', block: 'nearest', behavior: 'smooth' });
+		}
+	}
+
+	var observer = new IntersectionObserver(function(entries) {
+		var visible = entries
+			.filter(function(entry) { return entry.isIntersecting; })
+			.sort(function(a, b) { return b.intersectionRatio - a.intersectionRatio; });
+
+		if (visible.length) {
+			var match = sectionMap.filter(function(item) { return item.target === visible[0].target; })[0];
+			if (match) {
+				setActive(match.link);
+			}
+		}
+	}, {
+		root: null,
+		rootMargin: '-40% 0px -50% 0px',
+		threshold: [0, 0.25, 0.5, 0.75, 1]
+	});
+
+	sectionMap.forEach(function(item) {
+		observer.observe(item.target);
+	});
 }

@@ -1,0 +1,85 @@
+// Mobile bottom navigation
+// Hidden on desktop/tablet; shown as a fixed, thumb-reachable bar on phones.
+//
+// NOTE: this project's compiled assets/css/steller.css was hand-edited at some
+// point to use a custom navy primary color (#2c5aa0) that no longer matches
+// $primary in abstracts/_variables.scss (#ff7a57). This partial uses the real
+// site color directly so a future SCSS rebuild won't revert it to orange.
+$bottom-nav-active: #2c5aa0;
+
+.bottom-nav {
+	display: none;
+}
+
+@include media-breakpoint-down(sm) {
+
+	// Reserve space so fixed bottom nav never covers the footer/last section
+	body {
+		padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px));
+	}
+
+	.bottom-nav {
+		display: flex;
+		align-items: stretch;
+		position: fixed;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 1030;
+		height: 64px;
+		padding-bottom: env(safe-area-inset-bottom, 0px);
+		background: $white;
+		box-shadow: 0 -4px 16px rgba($gray-500, .25);
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+		scroll-snap-type: x proximity;
+
+		// hide scrollbar (webkit + firefox)
+		scrollbar-width: none;
+		&::-webkit-scrollbar {
+			display: none;
+		}
+
+		.bottom-nav-link {
+			flex: 0 0 auto;
+			min-width: 68px;
+			scroll-snap-align: start;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			gap: 2px;
+			padding: 6px 10px;
+			color: $gray-600;
+			text-decoration: none;
+			@include custom-transition(all, .2);
+
+			.bn-icon {
+				font-size: 20px;
+				line-height: 1;
+				@include custom-transition(transform, .2);
+			}
+
+			.bn-label {
+				font-size: 10px;
+				font-weight: 600;
+				line-height: 1;
+				white-space: nowrap;
+			}
+
+			&:hover,
+			&:focus {
+				color: $bottom-nav-active;
+				text-decoration: none;
+			}
+
+			&.active {
+				color: $bottom-nav-active;
+
+				.bn-icon {
+					transform: translateY(-2px) scale(1.1);
+				}
+			}
+		}
+	}
+}
