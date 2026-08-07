@@ -11745,11 +11745,14 @@ pre {
   .navbar .navbar-nav {
     flex-direction: row;
   }
-  .navbar .navbar-nav .nav-item:not(.lang-item) {
+  .navbar .navbar-nav .nav-item:not(.lang-item):not(.theme-item) {
     display: none;
   }
-  .navbar .navbar-nav .lang-item {
+  .navbar .navbar-nav .theme-item {
     margin-left: auto;
+  }
+  .navbar .navbar-nav .lang-item {
+    margin-left: 0;
   }
 }
 

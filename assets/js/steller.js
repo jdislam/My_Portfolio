@@ -52,6 +52,8 @@ $(document).ready(function(){
 	initForceDownloadCv();
 
 	initLanguage();
+
+	initThemeToggle();
 });
 
 var currentLang = 'en';
@@ -439,6 +441,56 @@ function initForceDownloadCv() {
 				// navigation so the user can still get the file.
 				window.location.href = fileUrl;
 			});
+	});
+}
+
+// Light/Dark mode toggle. Theme is applied ASAP by an inline script in
+// <head> (before first paint) to avoid a flash of the wrong theme; this
+// function just wires up the button and keeps localStorage in sync.
+function initThemeToggle() {
+	var toggleBtn = document.getElementById('theme-toggle');
+	if (!toggleBtn) {
+		return;
+	}
+
+	var root = document.documentElement;
+
+	function currentTheme() {
+		return root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+	}
+
+	function applyTheme(theme) {
+		root.setAttribute('data-theme', theme);
+		localStorage.setItem('theme', theme);
+		toggleBtn.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
+	}
+
+	// Sync the button's a11y state with whatever the inline head script set.
+	applyTheme(currentTheme());
+
+	toggleBtn.addEventListener('click', function () {
+		applyTheme(currentTheme() === 'dark' ? 'light' : 'dark');
+	});
+
+	// Follow the OS theme change if the user hasn't chosen one explicitly.
+	if (window.matchMedia) {
+		var media = window.matchMedia('(prefers-color-scheme: dark)');
+		var onSystemChange = function (e) {
+			if (!localStorage.getItem('theme-user-set')) {
+				applyTheme(e.matches ? 'dark' : 'light');
+			}
+		};
+		if (media.addEventListener) {
+			media.addEventListener('change', onSystemChange);
+		} else if (media.addListener) {
+			media.addListener(onSystemChange);
+		}
+	}
+
+	// Mark the theme as explicitly user-chosen once they click the toggle,
+	// so we stop overriding it based on OS preference changes.
+	toggleBtn.addEventListener('click', function () {
+		localStorage.setItem('theme-user-set', '1');
 	});
 }
 

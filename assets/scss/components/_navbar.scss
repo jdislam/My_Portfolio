@@ -36,7 +36,7 @@
 		padding: 0 20px;
 
 		// Bottom nav takes over section links on mobile;
-		// keep only the language toggle in the top bar.
+		// keep only the theme and language toggles in the top bar.
 		.navbar-toggler {
 			display: none;
 		}
@@ -49,12 +49,16 @@
 		.navbar-nav {
 			flex-direction: row;
 
-			.nav-item:not(.lang-item) {
+			.nav-item:not(.lang-item):not(.theme-item) {
 				display: none;
 			}
 
-			.lang-item {
+			.theme-item {
 				margin-left: auto;
+			}
+
+			.lang-item {
+				margin-left: 0;
 			}
 		}
 	}

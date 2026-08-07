@@ -3,13 +3,26 @@
 <head>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
-    <meta name="description" content="Md Jahidul Islam - Data Analyst | Tech Enthusiast">
+    <meta name="description" content="Md Jahidul Islam - Data Analyst | Full Stack Django Developer">
     <meta name="author" content="Md Jahidul Islam">
     <title>Jahidul | Portfolio</title>
     <!-- font icons -->
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
     <!-- Bootstrap + Steller main styles -->
 	<link rel="stylesheet" href="assets/css/steller.css">
+    <!-- Dark mode overrides -->
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <!-- AI assistant widget -->
+    <link rel="stylesheet" href="assets/css/ai-assistant.css">
+    <!-- Set theme before paint to avoid a light-mode flash -->
+    <script>
+        (function () {
+            var saved = localStorage.getItem('theme');
+            var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            var theme = saved || (prefersDark ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
 </head>
 <body>
 
@@ -49,6 +62,24 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact" data-i18n="navContact">Contact</a>
+                    </li>
+                    <li class="nav-item theme-item">
+                        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+                            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <circle cx="12" cy="12" r="4"></circle>
+                                <line x1="12" y1="1.5" x2="12" y2="4"></line>
+                                <line x1="12" y1="20" x2="12" y2="22.5"></line>
+                                <line x1="4.2" y1="4.2" x2="6" y2="6"></line>
+                                <line x1="18" y1="18" x2="19.8" y2="19.8"></line>
+                                <line x1="1.5" y1="12" x2="4" y2="12"></line>
+                                <line x1="20" y1="12" x2="22.5" y2="12"></line>
+                                <line x1="4.2" y1="19.8" x2="6" y2="18"></line>
+                                <line x1="18" y1="6" x2="19.8" y2="4.2"></line>
+                            </svg>
+                            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path>
+                            </svg>
+                        </button>
                     </li>
                     <li class="nav-item lang-item">
                         <button id="lang-toggle" type="button" class="btn btn-outline-secondary btn-sm ml-3">বাংলা</button>
@@ -280,7 +311,7 @@
 
             <div class="row justify-content-center">
                 <div class="col-md-6">
-                    <div class="custom-card card border text-left p-4">
+                    <div class="custom-card card border text-left p-4 mb-4">
                         <div class="card-body">
                             <h5 data-i18n-html="project1Title">Ride Schedule <span class="subtitle">— Academic Project</span></h5>
                             <p class="mt-2" data-i18n-html="project1Desc">Ride Scheduling and Service Management System. Riders can post daily, weekly, or monthly ride schedules and drivers can manage ride requests. Includes service-based ride features like parcel and pharmacy-related rides, fare estimation through CostBot, ratings, and notifications.</p>
@@ -291,7 +322,7 @@
                 </div>
 
                 <div class="col-md-6">
-                    <div class="custom-card card border text-left p-4">
+                    <div class="custom-card card border text-left p-4 mb-4">
                         <div class="card-body">
                             <h5 data-i18n-html="project2Title">Mini Compiler <span class="subtitle">— Academic Project</span></h5>
                             <p class="mt-2" data-i18n-html="project2Desc">A complete end-to-end mini-compiler built in Python featuring tokenization, AST generation, type/semantic checking, Three-Address Code (TAC) generation, a peephole optimizer, stack-machine code generation, and a custom Virtual Machine runtime.</p>
@@ -302,7 +333,7 @@
                 </div>
 
                 <div class="col-md-6">
-                    <div class="custom-card card border text-left p-4">
+                    <div class="custom-card card border text-left p-4 mb-4">
                         <div class="card-body">
                             <h5 data-i18n-html="project3Title">Square_Analog_Clock <span class="subtitle">— Academic Project</span></h5>
                             <p class="mt-2" data-i18n-html="project3Desc">A modern analog clock with a squircle (rounded-square) dial, dynamic shadows, smoothly sweeping hands, and an animated pendulum. Built it for Computer Graphics Lab.</p>
@@ -771,6 +802,51 @@
         </a>
     </nav>
     <!-- End of Mobile Bottom Navigation -->
+
+    <!-- AI Assistant widget (bottom-right chat) -->
+    <button type="button" id="ai-fab" class="ai-fab" aria-haspopup="dialog" aria-expanded="false" aria-controls="ai-panel" aria-label="Open ChatBot to ask about Jahidul">
+        <svg class="ai-fab-icon-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+        </svg>
+        <svg class="ai-fab-icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+    </button>
+
+    <div id="ai-panel" class="ai-panel" role="dialog" aria-modal="false" aria-hidden="true" aria-labelledby="ai-panel-title">
+        <div class="ai-panel-header">
+            <div class="ai-panel-avatar">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                </svg>
+            </div>
+            <div class="ai-panel-title" id="ai-panel-title">
+                <strong>ChatBot</strong>
+                <span><span class="ai-panel-status" aria-hidden="true"></span>Ask me about Jahidul</span>
+            </div>
+            <button type="button" id="ai-panel-close" class="ai-panel-close" aria-label="Close chat">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+
+        <div class="ai-panel-body" id="ai-panel-body" aria-live="polite"></div>
+
+        <div class="ai-quick-replies" id="ai-quick-replies"></div>
+
+        <form class="ai-panel-footer" id="ai-form">
+            <textarea id="ai-input" class="ai-input" rows="1" placeholder="Ask about Jahidul's skills, projects…" aria-label="Ask a question about Jahidul"></textarea>
+            <button type="submit" id="ai-send" class="ai-send" aria-label="Send question">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M2 21l21-9L2 3v7l15 2-15 2z"></path>
+                </svg>
+            </button>
+        </form>
+    </div>
+    <!-- End of AI Assistant widget -->
 	
 	<!-- core  -->
     <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
@@ -780,6 +856,8 @@
 
     <!-- steller js -->
     <script src="assets/js/steller.js"></script>
+    <!-- AI assistant widget -->
+    <script src="assets/js/ai-assistant.js"></script>
 
 </body>
 </html>
